@@ -7,7 +7,6 @@ import java.util.List;
 
 public class CustomerService implements IBaseService<Customer>{
     private List<Customer> customerList;
-
     {
         customerList = new ArrayList<>();
         customerList.add(new Customer(1, "A", "a@a.a", "Hue"));
