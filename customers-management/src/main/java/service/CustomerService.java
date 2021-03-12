@@ -41,7 +41,6 @@ public class CustomerService implements IBaseService<Customer>{
         Customer updating = findById(customer.getId());
         if (updating == null)
             throw new RuntimeException("khong tim thay khach hang");
-
         updating.setEmail(customer.getEmail());
         updating.setAddress(customer.getAddress());
         updating.setName(customer.getName());
@@ -52,6 +51,4 @@ public class CustomerService implements IBaseService<Customer>{
         Customer customer = findById(id);
         customerList.remove(customer);
     }
-
-
 }
