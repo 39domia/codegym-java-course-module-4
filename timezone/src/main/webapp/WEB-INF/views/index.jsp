@@ -14,8 +14,8 @@
 <span>Current time in ${city}: <strong>${date}</strong></span>
 <form id="locale" action="worldclock" method="get">
     <select name="city" onchange="document.getElementById('locale').submit()">
-        <option value="Asia/Ho_Chi_Minh">Select a city</option>
-        <option value="Asia/Ho_Chi_Minh" selected>Ho Chi Minh</option>
+        <option value="Asia/Ho_Chi_Minh" >Select a city</option>
+        <option value="Asia/Ho_Chi_Minh" >Ho Chi Minh</option>
         <option value="Singapore">Singapore</option>
         <option value="Asia/Hong_Kong">Hong Kong</option>
         <option value="Asia/Tokyo">Tokyo</option>
