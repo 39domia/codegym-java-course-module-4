@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table class="header">
+    <thead>
+    <tr>
+        <td>index</td>
+        <td>count</td>
+        <td>current</td>
+        <td>even</td>
+        <td>odd</td>
+        <td>first</td>
+        <td>last</td>
+        <td>id</td>
+        <td>Name</td>
+        <td>Address</td>
+        <td>Role</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user, loopState: ${userList}">
+        <td th:text="${loopState.index}"></td>
+        <td th:text="${loopState.count}"></td>
+        <td th:text="${loopState.current}"></td>
+        <td th:text="${loopState.even}"></td>
+        <td th:text="${loopState.odd}"></td>
+        <td th:text="${loopState.first}"></td>
+        <td th:text="${loopState.last}"></td>
+        <td th:with="id= ${user.id}" th:text="${id}"></td>
+        <td th:with="name = 'CodeGym'" th:text="${name}"></td>
+        <td th:text="${user.address}"></td>
+        <td th:switch="${user.role}">
+            <span th:case="1">Admin</span>
+            <span th:case="2">Mod</span>
+            <span th:case="*">User</span>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
